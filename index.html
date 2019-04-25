@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>User | Result Page</title>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <h1> Result </h1>
+            <small class="text-muted">found {{users.length}} user</small>
+            
+            <hr/>
+            <div class="card">
+                <ul class="list-unstyled">
+                    {% for user in users %}
+    
+                    <li>
+                        <strong>{{user.getId()}}</strong> &nbsp; {{user.getPresentationName()}}
+                    </li>
+                    {% else %}
+                    <li>
+                        <small class="text-muted">No result</small>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
